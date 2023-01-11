@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#root{
+ height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+.first{
+    padding-top: 6rem;
+}
+
+.first h1{
+    font-size: 3rem;
+}
+
+.second{
+    padding-top: 21rem;
+}
+
+.second button{
+    height: 2.5rem;
+    width: 13rem;
+    margin-left: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.second button a{
+    color: white;
+}
+
+.second button:nth-of-type(2){
+    background-color: white;
+}
+
+.second button:nth-of-type(2) a{
+   color: black;
+}
+
+.arrow h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.arrow{
+    transform: translateY(0);
+    animation-name: arrow;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrow {
+    0%{transform: translateY(0);}
+    20%{transform: translateY(0);}
+    40%{transform: translateY(5px);}
+    60%{transform: translateY(10px);}
+    80%{transform: translateY(10px);}
+    100%{transform: translateY(0);}
+}
+
+.sideMenu ul{
+    list-style: none;
+    padding-top: 4rem;
+}
+
+.sideMenu{
+    background-color: white;
+    height: 100vh;
+    width: 18rem;
+    position: absolute;
+    top: 0;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.sideMenu a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    font-weight: bold;
+}
+
+.close{
+    position: absolute;
+    right: 0;
+    top: 2rem;
+    cursor: pointer;
+}
